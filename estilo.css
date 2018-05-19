@@ -1,0 +1,153 @@
+@charset: "UTF-8";
+
+@font-face {
+	src: url("GothamNarrow-Light.otf");
+	font-family: 'FontApp';
+}
+/*Início do reset para web design responsivo*/
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	border: none;
+	outline: none;
+	font-weight: 300;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #f5f5f5;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+}
+.descricao {
+	width: 100%;
+	background-color: #282d35;
+	margin-top: -10px;
+	padding-bottom: 5%;
+	padding-top: 4%;
+}
+
+.colaboradores {
+	background-color: #1f9ea9;
+	width: 70%;
+	padding: 6% 0 5% 0;
+	margin-left: 15%;
+}
+
+.colaboradores h1{
+	text-align: center;
+	color: #fff;
+	font-family: 'FontApp', sans-serif;
+}
+
+.colaboradores h2 {
+	text-align: center;
+	color: #fff;
+	font-family: 'FontApp', sans-serif;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+.colaboradores p {
+	text-align: center;
+	color: #fff;
+	font-family: 'FontApp', sans-serif;
+}
+
+input#hora {
+	border-radius: 10px;
+	background-color: #282d35;
+	border: 1px solid #1f9ea9;
+	padding: 2%;
+	color: #fff;
+	font-family: 'FontApp', sans-serif;
+	outline: 0;
+	margin: 1% 0;
+}
+
+input#data {
+	border-radius: 10px;
+	background-color: #282d35;
+	border: 1px solid #1f9ea9;
+	padding: 2%;
+	color: #fff;
+	font-family: 'FontApp', sans-serif;
+	outline: 0;
+}
+
+footer {
+	width: 100%;		
+	background-color: #282d35;
+	border-top: 1px solid #1f9ea9;;
+}
+
+.rodape p{
+	text-align: center;
+	color: #fff;
+	font-family: 'FontApp', sans-serif;
+}
+
+.creditos {
+	width: 100%;
+	background-color: #282d35;
+}
+
+.creditos p {
+	text-align: center;
+	margin: 0 0 3% 0;
+	color: #f5f5f5;
+	font-family: 'FontApp', sans-serif;
+}
+
+.creditos .horario {
+	text-align: center;
+}
+#backtopo {
+    display: scroll;
+    position: fixed;
+    top: 90%;
+    right: 1%;
+}
+
+.observacao {
+	float: right;
+	font-style: italic;
+	font-size: 0.7em;
+	margin-top: 5%;
+}
+.cabecalho {
+	background-color: #282d35;
+	width: 100%;
+	border-bottom: 1px solid #1f9ea9;
+	height: 75px;
+}
+
+.logo {
+	background-color: #282d35;
+	margin-left: 31%;
+	margin-top: 3%;
+}
+
+.social {
+	width: 100%;
+	margin-top: 5%;
+}
+
+.conteudocentral p{
+	position: absolute;
+	top: 5%;
+	left: 47.5%;
+	color: #f5f5f5;
+	font-family: 'FontApp', sans-serif;
+}

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+	<script src="jquery-2.0.0.js"></script>
+	<meta charset="UTF-8">
+	<title>SuaÁgua</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body onload="time()">
+	<header class="cabecalho">
+		
+		<div class="conteudocentral">
+			<img src="logo.png" class="logo">
+			<p>SUA <br>ÁGUA</P>
+		</div>
+	</header>
+
+	<div id="backtopo">
+		<a href="#" title="Voltar ao topo"><img src="voltar_cima.png"/></a>
+	</div>
+
+	<main class="creditos">
+		<script>
+		function time () {
+			//Declara um objeto chmado tempo a partir da clase Date()
+	     	var tempo = new Date();
+
+	     	//Inicializa as variáveis de conversão de dia e mês para o formato PT-BR
+	     	var diapt_br = null;
+	     	var mespt_br = null;
+	     	//Pega valores de medida de tempo
+	     	//Pega o ano completo
+	     	var ano = tempo.getFullYear();
+
+	     	//Pega o mês e adiciona mais 1
+	     	var mes = tempo.getMonth() + 1;
+
+	     	//Pega o dia e adiciona mais 1
+	     	var dia = tempo.getDay() + 1;
+
+	     	//Verifica se a data é menor que 10, caso verdade adiciona 0 mais a data atual
+	     	var data = ((tempo.getDate() < 10) ? "0" : "") + tempo.getDate();
+
+	     	//Verifica se a hora é menor que 12, caso verdade adiciona A.M, caso contrário adicona P.M
+	     	var ampm = ((tempo.getHours() < 12) ? "A.M." : "P.M.");
+	     	
+	     	//Pega a hora atual
+	     	var hora = tempo.getHours();
+
+			//Verifica se os minutos são  menores que 10, caso verdade adiciona 0 mais os minutos atuais  	
+	     	var minutos = ((tempo.getMinutes() < 10) ? ":0" : ":") + tempo.getMinutes();
+
+	     	//Verifica se os segundos são menores que 10, caso verdade adiciona 0 mais os segundos atuais
+	     	var segundos = ((tempo.getSeconds() < 10) ? ":0" : ":") + tempo.getSeconds();
+		    
+		    //Verifica qual é o número inteiro do dia atual, e joga em um variável no formato String
+		    if (dia == 1) {
+	     		diapt_br = "Domingo";
+	     	}
+
+	     	else if (dia == 2) {
+	     		diapt_br = "Segunda";
+	     	}
+
+	     	else if (dia == 3) {
+	     		diapt_br = "Terça";
+	     	}
+
+	     	else if (dia == 4) {
+	     		diapt_br = "Quarta";
+	     	}
+
+	      	else if (dia == 5) {
+	     		diapt_br = "Quinta";
+	     	}
+
+	      	else if (dia == 6) {
+	     		diapt_br = "Sexta";
+	     	}
+
+	     	else {
+	     		diapt_br = "Sábado";
+	     	}
+
+	        //Verifica qual é o número inteiro do mês atual, e joga em um variável no formato String
+
+	     	if (mes == 1) {
+	     		mespt_br = "Janeiro";
+	     	}
+
+	     	else if (mes == 2) {
+	     		mespt_br = "Fevereiro";
+	     	}
+
+	     	else if (mes == 3) {
+	     		mespt_br = "Março";
+	     	}
+
+	     	else if (mes == 4) {
+	     		mespt_br = "Abril";
+	     	}
+
+	     	else if (mes == 5) {
+	     		mespt_br = "Maio";
+	     	}
+
+	     	else if (mes == 6) {
+	     		mespt_br = "Junho";
+	     	}
+
+	     	else if (mes == 7) {
+	     		mespt_br = "Julho";
+	     	}
+
+	     	else if (mes == 8) {
+	     		mespt_br = "Agosto";
+	     	}
+
+	     	else if (mes == 9) {
+	     		mespt_br = "Setembro";
+	     	}
+
+	     	else if (mes == 10) {
+	     		mespt_br = "Outubro";
+	     	}
+
+	     	else if (mes == 11) {
+	     		mespt_br = "Novembro";
+	     	}
+
+	     	else {
+	     		mespt_br = "Dezembro";
+	     	}
+
+	     	//Joga todos os valores do tipo data em um formulario
+	     	document.getElementById('data').value = (diapt_br + ", " + data + " de " + mespt_br + " de " + ano);
+	     	//Joga todos os valores do tipo hora em um formulario
+	     	document.getElementById('hora').value = ("Agora são, " + hora + minutos + segundos + " " + ampm);
+	      	
+	      	//Configura um tempo de atualização de 1 segundo
+	      	setTimeout("time()",1000);
+	}
+		</script>
+	<br>
+	<p>Bem-vindo.</p>
+ 	<div class="horario">	
+ 		<form>
+ 			<input type="text" name="" readonly="" id="data" size="21"><br>
+ 			<input type="text" name="" readonly="" id="hora" size="19">
+ 		</form>
+	</div>
+	<div class="social">
+	 		<p><a href="javascript:history.go(-1)" style="color: #1f9ea9;">Voltar</a></p>	
+	 		<p><a href="iniciar.html" style="color: #1f9ea9;">Iniciar →</a></p>
+	</div>
+	</main>
+	<div class="descricao">
+	<div class="colaboradores">
+	 	<h1>UTILIZAÇÃO</h1>
+	 	<h2>O que é o SuaÁgua?</h2>
+
+	 	<p>O aplicativo SuaÁgua é um
+	 		app que tem a intenção de ajudar as pessoas
+	 		a economizarem água baseado em estatísticas
+	 		de empresas de abastecimento d'água.
+	 	</p>
+
+	 	<H2>Como utilizar ?</H2>
+
+	 		<p>Insira todos os dados que você ache que sejam relevantes para a realização 
+	 		do cálculo. Se possível, verifique horário e data de sua análise.</p>
+
+	 	<h2>Dicas</h2>
+
+	 		<p>
+	 			As dicas são baseadas nas faixas de consumo que você se encontra.
+	 			Outras também são geradas aleatoriamente para uma melhor interaçao com o usuário.
+	 		</p>
+	 	<h2>Como funciona?</h2>
+	 	<p>De acordo com o seu consumo ele compara com estatísticas
+	 	e lhe mostra o seu consumo de acordo com 4 faixas coloridas que são:<br>
+
+	 		<em>Vermelho</em> - Consumo alto<br>
+	 		<em>Azul</em> - Consumo médio<br>
+	 		<em>Verde</em> - Consumo baixo
+	 	</p>
+
+	 	<p class="observacao">O aplicativo não tem nenhuma relação com qualquer empresa de abastecimento</p>
+
+	 </div>
+	</div> 
+	<script>
+$(document).ready(function(){
+    
+    // hide #back-top first
+    $('#backtopo').hide();
+       
+    // fade in #back-top
+    $(function () {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 2) {
+                $('#backtopo').fadeIn();
+            } else {
+                $('#backtopo').fadeOut();
+            }
+        });
+
+        // scroll body to 0px on click
+        $('#backtopo').click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+    });
+
+});
+</script>
+
+<footer>
+	<div class="rodape">
+	<br>
+	<p>Do Ceará para o mundo.</p>
+
+	<p>Copyright &copy; - 2018.</p>
+	
+	<p>SuaÁgua - Todos os direitos reservados.</p>
+	</div>
+</footer>
+</body>
+</html>
