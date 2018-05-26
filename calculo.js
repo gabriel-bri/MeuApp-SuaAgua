@@ -1,18 +1,20 @@
 //# Descarga vaso Sanitario
-function q1(){
-//Litros
-	var x=document.fm.intt.value;
-//B-Radios
-	if(document.fm.Rad1[0].checked){
-		x=x*14;
-	}else if(document.fm.Rad1[1].checked){
-		x=x*12;
-	}else if(document.fm.Rad1[2].checked){
+
+ function q1(){
+ //Litros
+ 	var x=document.fm.intt.value;
+ //B-Radios
+ 	if(document.fm.Rad1[0].checked){
+ 		x=x*14;
+ 	}else if(document.fm.Rad1[1].checked){
+ 		x=x*12;
+ 	}else if(document.fm.Rad1[2].checked){
 		x=x*10;
 	}else{
-		x=0;
+ 		x=0;
 	}
-	return x;
+
+ 	return x;
 }
 //#banho e lavar rosto
 function q2(){
@@ -48,7 +50,7 @@ function q3(){
 	}
 	return x;
 }
-//#
+//#lavar Roupas com a torneira
 function q4(){
 //Litros
 	var x=document.fm.intt4.value;
@@ -58,17 +60,17 @@ function q4(){
 	//}
 //B-Radios
 	if(document.fm.Rad4[0].checked){
-		x=x*18;
+		x=x*17;
 	}else if(document.fm.Rad4[1].checked){
-		x=x*16;
-	}else if(document.fm.Rad4[2].checked){
 		x=x*15;
+	}else if(document.fm.Rad4[2].checked){
+		x=x*13;
 	}else{
 		x=0;
 	}
 	return x;
 }
-
+//#cosinhar e lavar alimentos
 function q5(){
 //Litros
 	var x=document.fm.intt5.value;
@@ -86,6 +88,9 @@ function q5(){
 function q6(){
 //Litros beber
 	var x=document.fm.intt6.value;
+	if(!x==='number'){
+		x=0;
+	}
 	return x;
 }
 //#Lava calcada
@@ -93,16 +98,14 @@ function q7(){
 //Litros
 	var x=document.fm.intt7.value;
 //Checkbox
-	if(document.fm.checB1.checked){
-/*botRadio*/ 		       if(document.fm.Rad7[0].checked){
-		x=x*18.5;
-	}else if(document.fm.Rad7[1].checked){
-		x=x*14;
-	}else if(document.fm.Rad7[2].checked){
-		x=x*10;
-	}else{
-		x=0;
-	}
+	if(document.fm.checB2.checked){
+		 if(document.fm.Rad7[0].checked){
+			x=x*17.5;
+		}else if(document.fm.Rad7[1].checked){
+			x=x*12;
+		}else if(document.fm.Rad7[2].checked){
+			x=x*10;
+		}
 	}else{
 		x=0;
 	}
@@ -111,7 +114,7 @@ function q7(){
 
 //#Torneira gotejando
 function q8(){
-var x=0;
+var x;
 	if(document.fm.CB.checked){
 		x=1.9*24;
 	}else{
@@ -119,32 +122,41 @@ var x=0;
 	}
 	return x;
 }
+
 //onclick do Button Resp
 function valueMotor(){
-	var x=q1()+q2()+q3()+q4()+q5()+q6()+q7()+q8()+q9();
+	var x=Math.round(q1()+q2()+q3()+q4()+q5()+q6());
 	
-	document.fm.buttonResp.value=x;
-
- 	alert(x);
-//	Condicional 
-	y=document.getElementById("conteiner");
-	if(x>200){
-		y.innerHTML="#";
-		y.setAtribute("style","background-color:red;");
-	}else if(x>170){
-		y.innerHTML="#";
-		y.setAtribute("style","background-color:orange;");
-	}else if(x>140){
-		y.innerHTML="#";
-		y.setAtribute("style","background-color:greem;");
+	//pode ser evitado
+	var x2=Math.round(q7()+q8());
+	if(x2>5){
+		var cc="Podem ser economizados: ";
+		document.getElementById("label1").innerHTML=cc+x2+ " litros de água";
 	}else{
-		y.innerHTML="#";
-		y.setAtribute("style","background-color:blue;");
-	
+		document.getElementById("label1").innerHTML="";
 	}
-}
-
-function voltaM(){
-	y.innerHTML="#";
-	y.setAtribute("style","background-color:none;");
+	//
+	var y=document.fm.buttonResp;
+	y.value=x;
+	if(x>200){
+ 		y.style.backgroundColor="red";
+ 		y.style.color="white";
+ 		document.getElementById("label2").innerHTML="Você realmente precisa gastar toda essa água?";
+	}else if(x>175){
+		y.style.backgroundColor="yellow";
+		y.style.color="white";
+		document.getElementById("label2").innerHTML="Você está um pouco acimma da média brasileira";
+	}else if(x>150){
+		y.style.backgroundColor="green";
+		y.style.color="white";
+		document.getElementById("label2").innerHTML="Você está na média de consumo de água do Brasil";
+	}else if(x>125){
+		y.style.backgroundColor="blue";
+		y.style.color="white";
+		document.getElementById("label2").innerHTML="Você está abaixo da média brasileira. A natureza agradece!";
+	}else{
+		y.style.backgroundColor="gray";
+		y.style.color="white";
+		document.getElementById("label2").innerHTML="Você consegue realmente sobreviver com essa quantidade de água?";
+	}
 }

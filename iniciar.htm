@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+	<meta charset="UTF-8">
+	<script src="calculo.js"></script>
+	<script type="text/javascript" src="dicas.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+	<script type="text/javascript" src="jquery-2.0.0.js"></script>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<link rel="stylesheet" type="text/css" href="iniciar.css">
+</head>
+<body>
+	<header class="cabecalho">
+		
+		<div class="conteudocentral">
+			<img src="logo.png" class="logo">
+			<p>SUA <br>ÁGUA</P>
+		</div>
+	</header>
+	<div id="backtopo">
+		<a href="#" title="Voltar ao topo"><img src="voltar_cima.png"/></a>
+	</div>
+
+	<form name="fm">
+		<div class="primeiro">
+			<br>
+			<p style="text-align: center; margin-left: 8%;" class="destaque"><a href="index.html" style="color: #1f9ea9; font-size: 1.3em;" >Página inicial</a></p>
+			<img src="vaso_sanitario.jpg">
+			<p><input type="number" name="intt" value="" placeholder="Descargas" style="width: 25%;"></p>
+			<br>
+			<span class="one"><input type="radio" name="Rad1" value="" id="ver"> <label for="ver">Vermelho</label></span>
+			<span class="two"><input type="radio" name="Rad1" value="" id="ama"> <label for="ama">Amarelo</label></span>
+			<span class="three"><input type="radio" name="Rad1" value="" id="verde"> <label for="verde"> Verde</label></span>
+		</div>
+
+		<div class="primeiro">
+		<br>
+		<img src="vaso_sanitario.jpg">
+		<p><input type="number" name="intt2" value="" placeholder="Minutos"></p>
+		<br>
+		<span class="one"><input type="radio" name="Rad2" value="" id="v1"> <label for="v1">Vermelho</label></span>
+		<span class="two"><input type="radio" name="Rad2" value="" id="v2"> <label for="v2">Amarelo</label></span>
+		<span class="three"><input type="radio" name="Rad2" value="" id="v3"> <label for="v3">Verde</label></span>
+		</div>
+
+		<div class="primeiro">
+		<br>
+		<img src="escovar_dentes.jpg">
+		<p><input type="number" name="intt3" value="" placeholder="Minutos"></p>
+		<br>
+		<span class="one"><input type="radio" name="Rad3" value="" id="c1"> <label for="c1">Vermelho</label> </span>
+		<span class="two"><input type="radio" name="Rad3" value="" id="c2"> <label for="c2">Amarelo </label></span>
+		<span class="three"><input type="radio" name="Rad3" value="" id="c3"> <label for="c3">Verde</label> </span>
+		<br>
+		<p style="text-align: center; margin-top: 4%;" class="destaque"><input type="checkbox" name="checB1" value="" id="roxo"> <label for="roxo">Roxo</label></p>
+		</div>
+
+		<div class="primeiro">
+		<br>
+		<img src="lavar_roupas.jpg">
+		<p><input type="number" name="intt4" value="" placeholder="Minutos"></p>
+		<br> 
+		<span class="one"><input type="radio" name="Rad4" value="" id="b1"> <label for="b1">Vermelho</label> </span>
+		<span class="two"><input type="radio" name="Rad4" value="" id="b2"> <label for="b2"> Amarelo </label>	</span>
+		<span class="three"><input type="radio" name="Rad4" value="" id="b3"> <label for="b3">Verde</label> </span>
+		</div>
+
+		<div class="primeiro">
+		<br>
+		<img src="vaso_sanitario.jpg">
+		<p><input type="number" name="intt5" value="" placeholder="Minutos"></p>
+		<br>
+		<span class="one"><input type="radio" name="Rad5" value="" id="d1"> <label for="d1">Vermelho</label> </span>
+		<span class="two"><input type="radio" name="Rad5" value="" id="d2"> <label for="d2"> Amarelo </label> </span>
+		<span class="three"><input type="radio" name="Rad5" value="" id="d3"> <label for="d3">Verde</label> </span>
+		</div>
+		
+		<div class="primeiro">
+		<br>
+		<img src="beber.jpg">
+		<br>
+		<p><input type="number" name="intt6" value="" placeholder="Minutos"></p>
+		</div>
+
+		<div class="primeiro">
+		<br>
+		<img src="lavar_calcada.jpg">
+		<p><input type="number" name="intt7" value="" placeholder="Minutos"></p>
+		<br>
+		<span class="one"><input type="radio" name="Rad7" value="" id="k1"> <label for="k1"> Vermelho</label> </span>
+		<span class="two"><input type="radio" name="Rad7" value="" id="k2"><label for="k2"> Amarelo </label> </span>
+		<span class="three"><input type="radio" name="Rad7" value="" id="k3"><label for="k3"> Verde </label></span>
+		<br>
+		<p style="text-align: center; margin-top: 4%;"  class="destaque"><input type="checkbox" name="checB2" value="" id="k4"> <label for="k4">Azul</label></p>
+		</div>
+
+		<div class="primeiro">
+		<br>
+		<img src="vaso_sanitario.jpg">
+		<p style="text-align: center; margin-top: 4%;"  class="destaque"><input type="checkbox" name="CB" value="" id="k5"><label for="k5">Azul</label></p>
+		</div>
+
+		<div class="primeiro">
+		<br>
+		<p style="text-align: center;" class="fonte"><input type="button" name="buttonResp" onclick="valueMotor()" value="Resultado" onclick="primeiro_aleatorio()"></p><br>
+		<p class="fonte" style="color: #f5f5f5;"><label id="label2"></label><label name="mostra" id="label1" ></label></p>
+		<br>
+		<p style="text-align: center;" class="fonte"><input type="button" name="" onclick="dicas()" value="Dica do momento"></p>
+		<br>
+		<p id="dicas"></p>
+
+		<br>
+		<p class="fonte" style="text-align: center;"><input type="button" value="Atualizar" onClick="history.go(0)"></p>
+	 	
+	 	</div>
+	</form>
+
+	<div id="conteiner"></div>
+	<script>
+$(document).ready(function(){
+    
+    // hide #back-top first
+    $('#backtopo').hide();
+       
+    // fade in #back-top
+    $(function () {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 2) {
+                $('#backtopo').fadeIn();
+            } else {
+                $('#backtopo').fadeOut();
+            }
+        });
+
+        // scroll body to 0px on click
+        $('#backtopo').click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+    });
+
+});
+</script>
+
+<footer>
+	<div class="rodape">
+	<br>
+	<p>Do Ceará para o mundo.</p>
+
+	<p>Copyright &copy; - 2018.</p>
+	
+	<p>SuaÁgua - Todos os direitos reservados.</p>
+	</div>
+</footer>
+</body>
+</html>

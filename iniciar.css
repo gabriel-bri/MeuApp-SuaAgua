@@ -1,0 +1,84 @@
+@charset: "UTF-8";
+
+@font-face {
+	src: url("GothamNarrow-Light.otf");
+	font-family: 'FontApp';
+}
+/*Início do reset para web design responsivo*/
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	border: none;
+	outline: none;
+	font-weight: 300;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #f5f5f5;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+.primeiro{
+	width: 100%;
+	background-color: #282d35;
+}
+
+.primeiro img {
+	margin-top: 5%;
+}
+
+input[type=number] {
+	margin-left: 44%;
+	width: 20%;
+}
+
+.one {
+	margin-left: 5%;
+	font-family: 'FontApp', sans-serif;
+	color: #f5f5f5;
+}
+.two {
+	margin-left: 8%;
+	font-family: 'FontApp', sans-serif;
+	color: #f5f5f5;
+}
+
+.three {
+	margin-left: 15%;
+	font-family: 'FontApp', sans-serif;
+	color: #f5f5f5;
+}
+
+.destaque {
+	font-family: 'FontApp', sans-serif;
+	color: #f5f5f5;	
+}
+
+.primeiro img {
+	margin-left: 35%;
+}
+
+#dicas {
+	font-family: 'FontApp', sans-serif;
+	text-align: center;
+	color: #f5f5f5;
+}
+
+.fonte {
+	font-family: 'FontApp', sans-serif;
+	font-size: 1em;
+	text-align: center;
+}

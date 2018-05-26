@@ -145,14 +145,13 @@
 	<br>
 	<p>Bem-vindo.</p>
  	<div class="horario">	
- 		<form>
- 			<input type="text" name="" readonly="" id="data" size="21"><br>
- 			<input type="text" name="" readonly="" id="hora" size="19">
- 		</form>
+ 		<p><output id="data"></output></p>
+ 		<br>
+ 		<p><output id="hora"></output></p>
 	</div>
-	<div class="social">
-	 		<p><a href="javascript:history.go(-1)" style="color: #1f9ea9;">Voltar</a></p>	
-	 		<p><a href="iniciar.html" style="color: #1f9ea9;">Iniciar →</a></p>
+	<div class="social">	
+	 		<p><a href="iniciar.htm" style="color: #1f9ea9; font-size: 2em;">Iniciar →</a></p>
+			<p><a href="javascript:history.go(-1)" style="color: #1f9ea9; font-size: 1.5em">Voltar</a></p>
 	</div>
 	</main>
 	<div class="descricao">
@@ -168,9 +167,31 @@
 
 	 	<H2>Como utilizar ?</H2>
 
-	 		<p>Insira todos os dados que você ache que sejam relevantes para a realização 
-	 		do cálculo. Se possível, verifique horário e data de sua análise.</p>
+	 		<p> 1 dia - Preenchimento do formulário com os dados do seu consumo de água em um dia normal.</p>
+	 		<p> 2 dia Em relação aos dados do primeiro dia tente economizar ao máximo e ao final das 48 horas de teste
+	 		você deve preencher o formulário novamente e tirar a difenrença entre os dados do primeiro e segundo dia.</p>
 
+	 		<br>
+
+	 		<h1>Verde</h1>
+
+	 		<p>Tentativa de economia</p>
+
+	 		<h1>Amarelo</h1>
+
+	 		<p>Pausas regulares</p>
+
+	 		<h1>Vermellho</h1>
+
+	 		<p>Economia zero</p>
+
+	 		<h1>Roxo</h1>
+
+	 		<p>Mudar entre torneira e copo</p>
+
+	 		<h1>Azul</h1>
+
+	 		<p>Adicional</p>
 	 	<h2>Dicas</h2>
 
 	 		<p>
@@ -179,17 +200,16 @@
 	 		</p>
 	 	<h2>Como funciona?</h2>
 	 	<p>De acordo com o seu consumo ele compara com estatísticas
-	 	e lhe mostra o seu consumo de acordo com 4 faixas coloridas que são:<br>
+	 	e lhe mostra o seu consumo de acordo com 3 faixas coloridas que são:<br>
 
 	 		<em>Vermelho</em> - Consumo alto<br>
 	 		<em>Azul</em> - Consumo médio<br>
 	 		<em>Verde</em> - Consumo baixo
 	 	</p>
-
-	 	<p class="observacao">O aplicativo não tem nenhuma relação com qualquer empresa de abastecimento</p>
-
 	 </div>
-	</div> 
+		
+		<p style="font-style: italic; font-size: 0.7em; margin-top: 5%; text-align: center; color: white;" class="info">O aplicativo não tem qualquer ligação com alguma empresa de abastecimento d'água.</p>
+	</div>
 	<script>
 $(document).ready(function(){
     
